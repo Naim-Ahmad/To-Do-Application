@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Application</title>
+    <!-- daisy ui cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-3xl font-extrabold text-center my-9">TO Do List 🖐️ 📚</h1>
+    </header>
+    <main class="xl:w-3/5 mx-auto">
+        <section>
+            <div class="text-center mb-10">
+                <!-- task description input -->
+                <input onkeyup="pressedEnter(event)" type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs me-2" id="input-task"/>
+                <!-- add task button -->
+                <button onclick="addTask()" class="btn btn-success btn-outline btn-accent">Add Task</button>
+            </div>
+            <div>
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        <!-- head -->
+                        <thead>
+                            <tr class="text-center">
+                                <th>Number</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            
+                        </tbody>
+                    </table>
+                   <div class="text-center mt-16">
+                     <button id="clearAll" onclick="clearAll()" class="btn btn-error btn-sm invisible">Clear all</button>
+                   </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
